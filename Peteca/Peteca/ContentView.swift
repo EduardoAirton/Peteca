@@ -10,8 +10,19 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        Text("Hello, World!")
-            .frame(maxWidth: .infinity, maxHeight: .infinity)
+        VStack(spacing: 20) {
+            
+            Spacer()
+            
+            
+            HStack {
+                ForEach(0..<5) { number in
+                    Games(objects: "logo")
+                }
+            }
+        }
+        .frame(width: 1024, height: 768)
+    .background(Image("playground"))
     }
 }
 

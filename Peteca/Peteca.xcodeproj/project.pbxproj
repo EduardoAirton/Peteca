@@ -12,6 +12,7 @@
 		11A68E38242BC71E00C233D9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 11A68E37242BC71E00C233D9 /* Assets.xcassets */; };
 		11A68E3B242BC71E00C233D9 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 11A68E3A242BC71E00C233D9 /* Preview Assets.xcassets */; };
 		11A68E3E242BC71E00C233D9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 11A68E3C242BC71E00C233D9 /* Main.storyboard */; };
+		11A68E47242BD6C900C233D9 /* Games.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11A68E46242BD6C900C233D9 /* Games.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +24,7 @@
 		11A68E3D242BC71E00C233D9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		11A68E3F242BC71E00C233D9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		11A68E40242BC71E00C233D9 /* Peteca.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Peteca.entitlements; sourceTree = "<group>"; };
+		11A68E46242BD6C900C233D9 /* Games.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Games.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +59,7 @@
 			children = (
 				11A68E33242BC71C00C233D9 /* AppDelegate.swift */,
 				11A68E35242BC71C00C233D9 /* ContentView.swift */,
+				11A68E46242BD6C900C233D9 /* Games.swift */,
 				11A68E37242BC71E00C233D9 /* Assets.xcassets */,
 				11A68E3C242BC71E00C233D9 /* Main.storyboard */,
 				11A68E3F242BC71E00C233D9 /* Info.plist */,
@@ -145,6 +148,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				11A68E47242BD6C900C233D9 /* Games.swift in Sources */,
 				11A68E36242BC71C00C233D9 /* ContentView.swift in Sources */,
 				11A68E34242BC71C00C233D9 /* AppDelegate.swift in Sources */,
 			);
