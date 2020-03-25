@@ -28,9 +28,8 @@ struct Games: View {
                     .onChanged {
                         self.dragAmount = CGSize(width: $0.translation.width, height: -$0.translation.height)
                     }
-                    .onEnded() {_ in
-                        
-                        self.dragAmount = .zero
+                    .onEnded {_ in
+   
                     }
             )
     }

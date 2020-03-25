@@ -19,6 +19,9 @@ struct ContentView: View {
                 ForEach(0..<5) { number in
                     Games(objects: "logo")
                 }
+                Games(objects: "logo")
+                    .overlay(Color.black)
+                    .cornerRadius(20)
             }
         }
         .frame(width: 1024, height: 768)
