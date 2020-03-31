@@ -10,10 +10,10 @@ import SwiftUI
 
 struct Games: View {
     @State private var dragAmount = CGSize.zero
+
     
     var objects: String
     var shadowColor = Color.black
-    
     
     var body: some View {
         Image(objects)
@@ -21,18 +21,22 @@ struct Games: View {
             .frame(width: 125, height: 125)
             .offset(dragAmount)
             .zIndex(dragAmount == .zero ? 0 : 1)
-            .shadow(color: shadowColor, radius: dragAmount == .zero ? 0 : 10)
-            .shadow(color: shadowColor, radius: dragAmount == .zero ? 0 : 10)
+            .shadow(color: self.shadowColor, radius: self.dragAmount == .zero ? 0 : 10)
+            .shadow(color: self.shadowColor, radius: self.dragAmount == .zero ? 0 : 10)
             .gesture(
                 DragGesture(coordinateSpace: .global)
                     .onChanged {
                         self.dragAmount = CGSize(width: $0.translation.width, height: -$0.translation.height)
                     }
-                    .onEnded {_ in
-   
-                    }
             )
+            
     }
+    
+    func petecaAnimation() {
+        
+    }
+    
+
 }
 
 struct Games_Previews: PreviewProvider {
