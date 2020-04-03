@@ -11,15 +11,16 @@ import SwiftUI
 struct PetecaView: View {
     @ObservedObject var playgroundView: PlaygroundView
     @State private var itens = ["Couro", "Areia", "Bico", "Pena Vermelha", "Pena Azul", "Pena Amarela", "Pena Verde"]
-    @State var ordemPeteca = ["Couro", "Areia", "Bico"]
+    @State var ordemPeteca = ["Couro", "Areia", "Bico", ""]
     @State private var petecaFrames = [CGRect](repeating: .zero, count: 4)
+    @State var estadoPeteca = "logo"
     
    @State var ordemMontagem = 0
     
     var body: some View {
         VStack(spacing: 20) {
             Spacer()
-            petecaBuild(imagem: "logo")
+            petecaBuild(imagem: estadoPeteca)
                 .overlay(GeometryReader { geo in
                     Color.clear
                         .onAppear{
@@ -37,10 +38,15 @@ struct PetecaView: View {
                     )
                     .zIndex(10)
                 }
+                
                 ForEach(3..<7) { itens in
                     petecaBuild(imagem: "\(self.itens[itens])", pena: true)
                     .zIndex(1)
                 }
+
+                
+                
+
             }
         }
         .frame(width: 1280, height: 800)
@@ -53,7 +59,6 @@ struct PetecaView: View {
             $0.contains(location)}) != nil {
             
             if item == self.ordemPeteca[self.ordemMontagem] {
-                print("Entrou")
                 return .certo
                 
             }else {
@@ -65,6 +70,19 @@ struct PetecaView: View {
 
      
     }
+    func trocaImagem(item: String) -> String{
+        if item == self.ordemPeteca[self.ordemMontagem] {
+            return self.ordemPeteca[self.ordemMontagem + 1]
+        }
+        return self.ordemPeteca[self.ordemMontagem]
+    }
+    
+//    func petecaDropped(location: CGPoint, itemPeteca: String) {
+//        if petecaFrames.firstIndex(where: {
+//        $0.contains(location)}) != nil {
+//            self.estadoPeteca = itemPeteca
+//        }
+//    }
 
 }
 
@@ -73,7 +91,6 @@ struct PetecaView_Previews: PreviewProvider {
         PetecaView(playgroundView: PlaygroundView())
     }
 }
-
 
 struct Peteca: View {
     

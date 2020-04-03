@@ -16,15 +16,17 @@ enum MontagemPeteca {
 
 struct petecaBuild: View {
     
-    @State private var dragAmount = CGSize.zero
+    @State private var dragAmount = CGSize()
     @State private var montagemPeteca = MontagemPeteca.desconhecido
-
+    
     @State private var petecaFrames = [CGRect](repeating: .zero, count: 4)
         
     @State var imagem = ""
     @State var pena = false
     
     var onChanged: ((CGPoint, String) -> MontagemPeteca)?
+    var onEnded: ((CGPoint, String) -> Void)?
+    var onEndedPena: ((String) -> Void)?
     
     var body: some View {
         Image(self.imagem)
@@ -39,10 +41,17 @@ struct petecaBuild: View {
                         self.dragAmount = CGSize(width: $0.translation.width, height: -$0.translation.height)
                         self.montagemPeteca = self.onChanged?($0.location, self.imagem) ?? .desconhecido
                     }
-                    .onEnded {_ in
+                    .onEnded {
                         if !self.pena {
                             self.dragAmount = .zero
+                        }else {
+                            self.onEndedPena?(self.imagem)
                         }
+                        if self.montagemPeteca == .certo {
+                            self.onEnded?($0.location, self.imagem)
+                        }
+                        
+                        
                         
                     }
             )
@@ -59,6 +68,4 @@ struct petecaBuild: View {
             return .red
         }
     }
-    
-
 }
