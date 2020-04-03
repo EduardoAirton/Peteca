@@ -18,6 +18,8 @@ struct ContentView: View {
                 UserPlayground(playgroundView: playgroundView)
             }else if playgroundView.currentPlayground == "MyPlayground"{
                 MyPlayground(playgroundView: playgroundView)
+            }else if playgroundView.currentPlayground == "PetecaBuild" {
+                PetecaView(playgroundView: playgroundView)
             }
         }
     }

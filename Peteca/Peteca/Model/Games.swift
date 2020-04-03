@@ -31,12 +31,6 @@ struct Games: View {
             )
             
     }
-    
-    func petecaAnimation() {
-        
-    }
-    
-
 }
 
 struct Games_Previews: PreviewProvider {
