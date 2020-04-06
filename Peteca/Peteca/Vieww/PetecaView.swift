@@ -12,7 +12,8 @@ struct PetecaView: View {
     @ObservedObject var playgroundView: PlaygroundView
     @State private var ordemPena = ["Pena Vermelha", "Pena Azul", "Pena Amarela", "Pena Verde"]
     
-    @State var ordemPeteca = ["Couro", "Areia", "Bico"]
+    @State var ordemPetecaMontagem = ["Frame", "Frame2", "Frame3" ,"Peteca2"]
+    @State var ordemPeteca = ["Frame2", "Areia", "Frame4", ""]
     @State private var petecaFrames = [CGRect](repeating: .zero, count: 4)
     
    @State var ordemMontagem = 0
@@ -21,10 +22,11 @@ struct PetecaView: View {
         VStack(spacing: 20) {
             Spacer()
                 Montagem()
+                .padding(.horizontal, 200)
                 .overlay(GeometryReader { geo in
-                    Image(self.ordemPeteca[self.ordemMontagem])
+                    Image(self.ordemPetecaMontagem[self.ordemMontagem])
                         .resizable()
-                        .frame(width: 125, height: 125)
+                        .frame(width: 200, height: 285)
                         .onAppear{
                             self.petecaFrames[0] = geo.frame(in: .global)
                         }
@@ -52,20 +54,27 @@ struct PetecaView: View {
     
     func petecaMoved(location: CGPoint, item: String) -> MontagemPeteca {
         
+        var temp = MontagemPeteca.desconhecido
+        
         if petecaFrames.firstIndex(where: {
             $0.contains(location)}) != nil {
             
-            if item == self.ordemPeteca[0] {
-                self.ordemMontagem += 1
-                return .certo
+            if item == self.ordemPeteca[self.ordemMontagem] {
+                
+                temp = .certo
                 
             }else {
-                return .errado
+                temp = .errado
             }
         }else {
-            return .desconhecido
+            temp = .desconhecido
         }
-
+        
+        if temp == .certo {
+            self.ordemMontagem += 1
+        }
+        
+        return temp
      
     }
 
@@ -83,15 +92,17 @@ struct Peteca: View {
     @ObservedObject var playgroundView: PlaygroundView
     
     @State var posicaoPeteca = CGPoint()
+    @State var imagem = ""
     @State private var petecaClicada = false
     @State var petecaBuild = false
     @State private var qtdClickPlaca = 0
+    @State var tamanho = CGFloat()
     
     var body: some View{
         
-        Image(petecaClicada ? "Placa" : "peteca")
+        Image(self.imagem)
             .resizable()
-            .frame(width: (petecaClicada ? 230 : 125), height: (petecaClicada ? 230 : 125))
+            .frame(width: self.tamanho, height: self.tamanho )
             .position(self.posicaoPeteca)
             .gesture(
                 TapGesture()
@@ -100,10 +111,9 @@ struct Peteca: View {
                         if self.petecaBuild {
                             self.playgroundView.currentPlayground = "PetecaBuild"
                         }
-                        self.petecaClicada.toggle()
                         self.qtdClickPlaca += 1
                         
-                        if self.qtdClickPlaca == 2 {
+                        if self.qtdClickPlaca == 1 {
                             if self.playgroundView.currentPlayground == "UserPlayground" {
                                 
                                 self.playgroundView.currentPlayground = "MyPlayground"

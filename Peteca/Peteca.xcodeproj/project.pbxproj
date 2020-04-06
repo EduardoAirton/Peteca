@@ -7,11 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		110F928A2434DF35007615FD /* PetecaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 110F92892434DF35007615FD /* PetecaView.swift */; };
-		113799F72433D0CA00F4F391 /* PlaygroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 113799F62433D0CA00F4F391 /* PlaygroundView.swift */; };
 		113799FC2433D57300F4F391 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 113799FB2433D57300F4F391 /* ContentView.swift */; };
-		113799FE2433D70500F4F391 /* UserPlayground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 113799FD2433D70500F4F391 /* UserPlayground.swift */; };
-		11379A002433DB4400F4F391 /* MyPlayground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 113799FF2433DB4400F4F391 /* MyPlayground.swift */; };
+		1153F49B243A8060008E2CC4 /* PetecaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1153F497243A8060008E2CC4 /* PetecaView.swift */; };
+		1153F49C243A8060008E2CC4 /* PlaygroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1153F498243A8060008E2CC4 /* PlaygroundView.swift */; };
+		1153F49D243A8060008E2CC4 /* UserPlayground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1153F499243A8060008E2CC4 /* UserPlayground.swift */; };
+		1153F49E243A8060008E2CC4 /* MyPlayground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1153F49A243A8060008E2CC4 /* MyPlayground.swift */; };
 		1180041C2435080800F663D3 /* Peteca.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1180041B2435080800F663D3 /* Peteca.swift */; };
 		11A68E34242BC71C00C233D9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11A68E33242BC71C00C233D9 /* AppDelegate.swift */; };
 		11A68E38242BC71E00C233D9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 11A68E37242BC71E00C233D9 /* Assets.xcassets */; };
@@ -21,11 +21,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		110F92892434DF35007615FD /* PetecaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetecaView.swift; sourceTree = "<group>"; };
-		113799F62433D0CA00F4F391 /* PlaygroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaygroundView.swift; sourceTree = "<group>"; };
 		113799FB2433D57300F4F391 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		113799FD2433D70500F4F391 /* UserPlayground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserPlayground.swift; sourceTree = "<group>"; };
-		113799FF2433DB4400F4F391 /* MyPlayground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPlayground.swift; sourceTree = "<group>"; };
+		1153F497243A8060008E2CC4 /* PetecaView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PetecaView.swift; sourceTree = "<group>"; };
+		1153F498243A8060008E2CC4 /* PlaygroundView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaygroundView.swift; sourceTree = "<group>"; };
+		1153F499243A8060008E2CC4 /* UserPlayground.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserPlayground.swift; sourceTree = "<group>"; };
+		1153F49A243A8060008E2CC4 /* MyPlayground.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyPlayground.swift; sourceTree = "<group>"; };
 		1180041B2435080800F663D3 /* Peteca.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Peteca.swift; sourceTree = "<group>"; };
 		11A68E30242BC71C00C233D9 /* Peteca.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Peteca.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		11A68E33242BC71C00C233D9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -57,17 +57,6 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
-		113799F92433D0F100F4F391 /* View */ = {
-			isa = PBXGroup;
-			children = (
-				113799F62433D0CA00F4F391 /* PlaygroundView.swift */,
-				113799FD2433D70500F4F391 /* UserPlayground.swift */,
-				113799FF2433DB4400F4F391 /* MyPlayground.swift */,
-				110F92892434DF35007615FD /* PetecaView.swift */,
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
 		113799FA2433D0F600F4F391 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
@@ -75,6 +64,17 @@
 				113799FB2433D57300F4F391 /* ContentView.swift */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		1153F496243A8053008E2CC4 /* Vieww */ = {
+			isa = PBXGroup;
+			children = (
+				1153F49A243A8060008E2CC4 /* MyPlayground.swift */,
+				1153F497243A8060008E2CC4 /* PetecaView.swift */,
+				1153F498243A8060008E2CC4 /* PlaygroundView.swift */,
+				1153F499243A8060008E2CC4 /* UserPlayground.swift */,
+			);
+			path = Vieww;
 			sourceTree = "<group>";
 		};
 		11A68E27242BC71C00C233D9 = {
@@ -96,8 +96,8 @@
 		11A68E32242BC71C00C233D9 /* Peteca */ = {
 			isa = PBXGroup;
 			children = (
+				1153F496243A8053008E2CC4 /* Vieww */,
 				113799FA2433D0F600F4F391 /* Controller */,
-				113799F92433D0F100F4F391 /* View */,
 				113799F82433D0EC00F4F391 /* Model */,
 				11A68E37242BC71E00C233D9 /* Assets.xcassets */,
 				11A68E3C242BC71E00C233D9 /* Main.storyboard */,
@@ -187,14 +187,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				11379A002433DB4400F4F391 /* MyPlayground.swift in Sources */,
+				1153F49E243A8060008E2CC4 /* MyPlayground.swift in Sources */,
 				1180041C2435080800F663D3 /* Peteca.swift in Sources */,
-				113799F72433D0CA00F4F391 /* PlaygroundView.swift in Sources */,
-				113799FE2433D70500F4F391 /* UserPlayground.swift in Sources */,
+				1153F49C243A8060008E2CC4 /* PlaygroundView.swift in Sources */,
 				113799FC2433D57300F4F391 /* ContentView.swift in Sources */,
+				1153F49D243A8060008E2CC4 /* UserPlayground.swift in Sources */,
 				11A68E47242BD6C900C233D9 /* Games.swift in Sources */,
 				11A68E34242BC71C00C233D9 /* AppDelegate.swift in Sources */,
-				110F928A2434DF35007615FD /* PetecaView.swift in Sources */,
+				1153F49B243A8060008E2CC4 /* PetecaView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

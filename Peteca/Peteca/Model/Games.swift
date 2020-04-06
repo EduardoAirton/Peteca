@@ -18,11 +18,9 @@ struct Games: View {
     var body: some View {
         Image(objects)
             .resizable()
-            .frame(width: 125, height: 125)
+            .frame(width: 173, height: 171)
             .offset(dragAmount)
             .zIndex(dragAmount == .zero ? 0 : 1)
-            .shadow(color: self.shadowColor, radius: self.dragAmount == .zero ? 0 : 10)
-            .shadow(color: self.shadowColor, radius: self.dragAmount == .zero ? 0 : 10)
             .gesture(
                 DragGesture(coordinateSpace: .global)
                     .onChanged {
