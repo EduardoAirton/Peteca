@@ -26,6 +26,7 @@ struct UserPlayground: View {
                 .frame(width: 60, height: 50)
                 .position(x: 200, y: 140)
                 
+                
             
             Peteca(playgroundView: playgroundView, posicaoPeteca: posicaoPeteca, imagem: "Placa", tamanho: 180)
             
